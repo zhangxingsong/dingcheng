@@ -13,9 +13,11 @@
 		C1D4AC942041004F00866670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D4AC932041004F00866670 /* Assets.xcassets */; };
 		C1D4AC972041004F00866670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D4AC952041004F00866670 /* LaunchScreen.storyboard */; };
 		C1D4AC9A2041004F00866670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D4AC992041004F00866670 /* main.m */; };
+		CF8A2C76F780E8859A6B6FF9 /* libPods-Dcct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12412F5443799408A4E4A0 /* libPods-Dcct.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D12412F5443799408A4E4A0 /* libPods-Dcct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dcct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D4AC872041004F00866670 /* Dcct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dcct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D4AC8A2041004F00866670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1D4AC8B2041004F00866670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		C1D4AC962041004F00866670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1D4AC982041004F00866670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1D4AC992041004F00866670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C69D1FE41748DB5432475FA5 /* Pods-Dcct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dcct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dcct/Pods-Dcct.debug.xcconfig"; sourceTree = "<group>"; };
+		D054408EC48F16E5387ABAA7 /* Pods-Dcct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dcct.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dcct/Pods-Dcct.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8A2C76F780E8859A6B6FF9 /* libPods-Dcct.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52651FFA0F44ACF9F4103487 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D12412F5443799408A4E4A0 /* libPods-Dcct.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1D4AC7E2041004F00866670 = {
 			isa = PBXGroup;
 			children = (
 				C1D4AC892041004F00866670 /* Dcct */,
 				C1D4AC882041004F00866670 /* Products */,
+				E5606B843D8924DE26EB5D4D /* Pods */,
+				52651FFA0F44ACF9F4103487 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			path = Dcct;
 			sourceTree = "<group>";
 		};
+		E5606B843D8924DE26EB5D4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69D1FE41748DB5432475FA5 /* Pods-Dcct.debug.xcconfig */,
+				D054408EC48F16E5387ABAA7 /* Pods-Dcct.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1D4AC9D2041004F00866670 /* Build configuration list for PBXNativeTarget "Dcct" */;
 			buildPhases = (
+				DF97B6AD0B9DCF11B081CE0B /* [CP] Check Pods Manifest.lock */,
 				C1D4AC832041004F00866670 /* Sources */,
 				C1D4AC842041004F00866670 /* Frameworks */,
 				C1D4AC852041004F00866670 /* Resources */,
+				7B4811796A894276123E34A6 /* [CP] Embed Pods Frameworks */,
+				C2512F088AD6E7E70A93CD8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B4811796A894276123E34A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dcct/Pods-Dcct-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2512F088AD6E7E70A93CD8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dcct/Pods-Dcct-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF97B6AD0B9DCF11B081CE0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dcct-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1D4AC832041004F00866670 /* Sources */ = {
@@ -276,13 +354,15 @@
 		};
 		C1D4AC9E2041004F00866670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69D1FE41748DB5432475FA5 /* Pods-Dcct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55C94GQWYK;
+				DEVELOPMENT_TEAM = 2ABLB3U6TE;
 				INFOPLIST_FILE = Dcct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dcct.Dcct;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dingcheng.dcct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +370,15 @@
 		};
 		C1D4AC9F2041004F00866670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D054408EC48F16E5387ABAA7 /* Pods-Dcct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55C94GQWYK;
+				DEVELOPMENT_TEAM = 2ABLB3U6TE;
 				INFOPLIST_FILE = Dcct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dcct.Dcct;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dingcheng.dcct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
